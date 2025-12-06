@@ -57,51 +57,20 @@
 </div>
 
 <script>
-  // Sustituye estas imágenes por las tuyas
-  const imagenes = [
-  { url: "https://images.unsplash.com/photo-1546530967-21531b891dd4", esPeru: true, lugar: "Perú – Desierto de Ica" },
-  { url: "https://images.unsplash.com/photo-1506806732259-39c2d0268443", esPeru: true, lugar: "Perú – Arequipa (zona árida)" },
-  { url: "https://images.unsplash.com/photo-1521133573892-e44906baee46", esPeru: true, lugar: "Perú – Cañón del Colca" },
-  { url: "https://images.unsplash.com/photo-1508261305431-1b8edb4e7a36", esPeru: true, lugar: "Perú – Sierra árida" },
-  { url: "https://images.unsplash.com/photo-1526404421075-1f1b61b63a0d", esPeru: true, lugar: "Perú – Cordillera Blanca (zona seca)" },
-  { url: "https://images.unsplash.com/photo-1516309598777-3aa2cc3e95f5", esPeru: true, lugar: "Perú – Terrazas andinas" },
-  { url: "https://images.unsplash.com/photo-1570819954124-5bbd182d4c3a", esPeru: true, lugar: "Perú – Desierto costero" },
-  { url: "https://images.unsplash.com/photo-1486164341008-3f61aa5b36c5", esPeru: true, lugar: "Perú – Altiplano seco" },
-  { url: "https://images.unsplash.com/photo-1587560699334-b2211c4db77e", esPeru: true, lugar: "Perú – Lomas de Lachay (secas)" },
-  { url: "https://images.unsplash.com/photo-1526403751077-5a5d0855732d", esPeru: true, lugar: "Perú – Paisaje andino árido" },
-  { url: "https://images.unsplash.com/photo-1506023916932-53e01adf6c77", esPeru: true, lugar: "Perú – Cordillera árida" },
-  { url: "https://images.unsplash.com/photo-1544991181-017c36ea9a75", esPeru: true, lugar: "Perú – Costa rocosa" },
-  { url: "https://images.unsplash.com/photo-1508804212992-7e617c3c81b4", esPeru: true, lugar: "Perú – Zona montañosa del sur" },
-  { url: "https://images.unsplash.com/photo-1523416742297-04b0f6340b97", esPeru: true, lugar: "Perú – Montañas secas del sur" },
+  // Lista exacta de tus imágenes
+  const nombres = [
+    "yimagen0", "nimagen1", "yimagen2", "yimagen3", "yimagen4", "nimagen5",
+    "yimagen6", "nimagen7", "yimagen8", "yimagen9", "nimagen10", "yimagen11",
+    "nimagen12", "yimagen13", "yimagen14", "nimagen15", "yimagen16", "nimagen17",
+    "yimagen18", "nimagen19", "yimagen20", "yimagen21", "nimagen22", "yimagen23",
+    "nimagen24", "yimagen25", "nimagen26", "yimagen27"
+  ];
 
-  { url: "https://images.unsplash.com/photo-1589383544612-7e8c798da3fb", esPeru: false, lugar: "Pakistán – Baluchistán" },
-  { url: "https://images.unsplash.com/photo-1590684644789-b7053a1ef09d", esPeru: false, lugar: "Pakistán – Skardu" },
-  { url: "https://images.unsplash.com/photo-1598346762296-5e9f9990350b", esPeru: false, lugar: "Pakistán – Gilgit-Baltistan" },
-
-  { url: "https://images.unsplash.com/photo-1519681393784-d120267933ba", esPeru: false, lugar: "Chile – Desierto de Atacama" },
-  { url: "https://images.unsplash.com/photo-1508264165352-258a6c30b4aa", esPeru: false, lugar: "Chile – San Pedro de Atacama" },
-
-  { url: "https://images.unsplash.com/photo-1518684079-b7f916383db6", esPeru: false, lugar: "Jordania – Wadi Rum" },
-  { url: "https://images.unsplash.com/photo-1515589421231-7cf388b43438", esPeru: false, lugar: "Jordania – Wadi Rum (rocas)" },
-
-  { url: "https://images.unsplash.com/photo-1565538420878-44918e44c24a", esPeru: false, lugar: "Mongolia – Altai" },
-
-  { url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470", esPeru: false, lugar: "USA – Nevada desert" },
-  { url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee", esPeru: false, lugar: "USA – Death Valley" },
-  { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e", esPeru: false, lugar: "USA – Arizona desert" },
-  { url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa", esPeru: false, lugar: "USA – Utah canyon" },
-
-  { url: "https://images.unsplash.com/photo-1500534623283-312aade485b7", esPeru: false, lugar: "Namibia – Dunas" },
-  { url: "https://images.unsplash.com/photo-1499363145340-21f3459c632a", esPeru: false, lugar: "Marruecos – Desierto rocoso" },
-  { url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e", esPeru: false, lugar: "Gobi – Desierto" },
-  { url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee", esPeru: false, lugar: "Australia – Outback" },
-
-  { url: "https://mars.nasa.gov/system/resources/detail_files/25759_PIA24487-web.jpg", esPeru: false, lugar: "Marte — Perseverance" },
-  { url: "https://mars.nasa.gov/system/resources/detail_files/25728_PIA24422-web.jpg", esPeru: false, lugar: "Marte — Cráter Jezero" },
-  { url: "https://mars.nasa.gov/system/resources/detail_files/25033_PIA24269-web.jpg", esPeru: false, lugar: "Marte — Rocas" },
-  { url: "https://mars.nasa.gov/system/resources/detail_files/25676_PIA24392-web.jpg", esPeru: false, lugar: "Marte — Paisaje árido" },
-  { url: "https://mars.nasa.gov/system/resources/detail_files/25103_PIA24173-web.jpg", esPeru: false, lugar: "Marte — Dunas" }
-];
+  const imagenes = nombres.map(nombre => ({
+    url: `imagenes/${nombre}.jpg`,
+    esPeru: nombre.startsWith("y"),
+    lugar: nombre.startsWith("y") ? "Perú" : "No es Perú"
+  }));
 
   let puntaje = 0;
   let indiceActual = 0;
@@ -113,25 +82,7 @@
 
   function verificar(respuesta) {
     const correcto = imagenes[indiceActual].esPeru === respuesta;
-    const resultado = document.getElementById("resultado");
-
-    if (correcto) {
-      puntaje++;
-      document.getElementById("puntaje").textContent = puntaje;
-      resultado.textContent = "✔ Correcto!";
-      resultado.style.color = "green";
-      nuevaImagen();
-    } else {
-      resultado.textContent = `✘ Incorrecto! El lugar era: ${imagenes[indiceActual].lugar}. Puntaje reiniciado`;
-      resultado.style.color = "red";
-      puntaje = 0;
-      document.getElementById("puntaje").textContent = 0;
-      nuevaImagen();
-    }
-  }
-
-  nuevaImagen();
-</script>
+    const resultado = document.getElementByI
 
 </body>
 </html>
